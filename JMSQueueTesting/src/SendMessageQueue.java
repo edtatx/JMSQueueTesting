@@ -17,7 +17,7 @@ public class SendMessageQueue {
 				  Queue queue = session.createQueue("test.queue");         // only specifies queue name (more)
 
 				  MessageProducer producer = session.createProducer(queue);
-				  Message msg = session.createTextMessage("Hi Ed this is a message1234567890!!!!");  // text message (more)
+				  Message msg = session.createTextMessage("Hi Ed this is a message");  // text message (more)
 				  producer.send(msg);
 				}
 				finally {

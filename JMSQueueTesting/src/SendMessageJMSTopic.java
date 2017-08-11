@@ -39,7 +39,7 @@ public class SendMessageJMSTopic {
 			connection.start();		
 			
 			// Publish
-			String payload = "Hello this is an important task!!!, make sure you schedule your project";
+			String payload = "Hello this is an important task, make sure you schedule your project";
 			Message msg = session.createTextMessage(payload);
 			MessageProducer producer = session.createProducer(topic);
 			System.out.println("Sending: '" + payload + "'");
@@ -51,7 +51,7 @@ public class SendMessageJMSTopic {
 			if (connection != null) {
 				connection.close();
 			}
-			//broker.stop();
+			//broker.stop(); this stops the broker and deletes the topic so its commented out so the message can be consumed
 		}
 	}
 }
